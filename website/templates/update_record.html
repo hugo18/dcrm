@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="col-md-6 offset-md-3">
+<h1>Atualizar cadastro</h1>
+<br/>
+
+<form method="POST">
+	{% csrf_token %}
+
+	{{ form.as_p }}
+
+  <button type="submit" class="btn btn-warning">Atualizar cadastro</button>
+  <a href="{% url 'home' %}" class="btn btn-secondary">Voltar</a>
+
+</form>
+
+
+</div>
+
+{% endblock %}
